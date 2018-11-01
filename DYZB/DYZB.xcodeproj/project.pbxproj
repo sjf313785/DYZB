@@ -54,9 +54,8 @@
 		A14B5F7D218A9D1800BA6EFF /* DYZB */ = {
 			isa = PBXGroup;
 			children = (
-				A14B5F90218A9D9400BA6EFF /* Classes */,
 				A14B5F7E218A9D1800BA6EFF /* AppDelegate.swift */,
-				A14B5F82218A9D1800BA6EFF /* Main.storyboard */,
+				A14B5F90218A9D9400BA6EFF /* Classes */,
 				A14B5F85218A9D1800BA6EFF /* Assets.xcassets */,
 				A14B5F87218A9D1800BA6EFF /* LaunchScreen.storyboard */,
 				A14B5F8A218A9D1800BA6EFF /* Info.plist */,
@@ -110,6 +109,7 @@
 		A14B5F94218A9D9400BA6EFF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A14B5F82218A9D1800BA6EFF /* Main.storyboard */,
 				A14B5FA0218AA18A00BA6EFF /* Controller */,
 				A14B5FA1218AA18A00BA6EFF /* Model */,
 				A14B5FA2218AA18A00BA6EFF /* View */,
