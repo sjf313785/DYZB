@@ -4,69 +4,24 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="bmm-6C-zPc">
             <objects>
-                <tabBarController id="wcb-9b-VLI" sceneMemberID="viewController">
+                <tabBarController id="wcb-9b-VLI" customClass="MainViewController" customModule="DYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wOi-af-Nhp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="fgc-z4-05U" kind="relationship" relationship="viewControllers" id="dVb-VV-f5f"/>
-                        <segue destination="PXx-Zy-G2u" kind="relationship" relationship="viewControllers" id="mzb-9N-gla"/>
-                        <segue destination="LdN-bf-3dU" kind="relationship" relationship="viewControllers" id="rHv-Js-PTO"/>
-                        <segue destination="Lcp-5s-NRF" kind="relationship" relationship="viewControllers" id="W0m-jq-RW0"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mV-KM-4Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1089" y="482"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="p2z-5q-b7i">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="fgc-z4-05U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YFv-Rj-A3P"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjx-zR-Owx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-38" y="367"/>
-        </scene>
-        <!--Live-->
-        <scene sceneID="4JW-YT-gBZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Live" id="PXx-Zy-G2u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="P8g-D7-erK"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xN2-Xu-uSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-38" y="481"/>
-        </scene>
-        <!--Follow-->
-        <scene sceneID="Jvu-gR-3LU">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Follow" id="LdN-bf-3dU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UkS-W6-4hp"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YPU-Ii-PMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-50" y="554"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="bTB-Z4-gCd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="Lcp-5s-NRF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pak-zE-Uxj"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2qB-FG-REY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-50" y="616"/>
         </scene>
     </scenes>
 </document>

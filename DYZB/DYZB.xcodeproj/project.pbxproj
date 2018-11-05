@@ -16,6 +16,7 @@
 		A1DA34B8218FE22F007C7C5B /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA34B7218FE22F007C7C5B /* Live.storyboard */; };
 		A1DA34BB218FE24A007C7C5B /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA34B9218FE24A007C7C5B /* Follow.storyboard */; };
 		A1DA34BD218FE25B007C7C5B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA34BC218FE25B007C7C5B /* Profile.storyboard */; };
+		A1DA34BF218FE44C007C7C5B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA34BE218FE44C007C7C5B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A1DA34B7218FE22F007C7C5B /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		A1DA34BA218FE24A007C7C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB/Classes/Main/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
 		A1DA34BC218FE25B007C7C5B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		A1DA34BE218FE44C007C7C5B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,6 @@
 		A14B5F72218A9D1800BA6EFF = {
 			isa = PBXGroup;
 			children = (
-				A1DA34BC218FE25B007C7C5B /* Profile.storyboard */,
 				A14B5F7D218A9D1800BA6EFF /* DYZB */,
 				A14B5F7C218A9D1800BA6EFF /* Products */,
 			);
@@ -75,11 +76,11 @@
 		A14B5F90218A9D9400BA6EFF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A14B5F91218A9D9400BA6EFF /* Follow */,
-				A14B5F92218A9D9400BA6EFF /* Home */,
 				A14B5F93218A9D9400BA6EFF /* Live */,
-				A14B5F94218A9D9400BA6EFF /* Main */,
+				A14B5F91218A9D9400BA6EFF /* Follow */,
 				A14B5F95218A9D9400BA6EFF /* Profile */,
+				A14B5F92218A9D9400BA6EFF /* Home */,
+				A14B5F94218A9D9400BA6EFF /* Main */,
 				A14B5F96218A9D9400BA6EFF /* Tools */,
 			);
 			path = Classes;
@@ -88,6 +89,7 @@
 		A14B5F91218A9D9400BA6EFF /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				A1DA34B9218FE24A007C7C5B /* Follow.storyboard */,
 				A14B5F99218AA17100BA6EFF /* Controller */,
 				A14B5F97218AA17100BA6EFF /* Model */,
 				A14B5F98218AA17100BA6EFF /* View */,
@@ -98,6 +100,7 @@
 		A14B5F92218A9D9400BA6EFF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A1DA34B4218FE212007C7C5B /* Home.storyboard */,
 				A14B5F9B218AA17A00BA6EFF /* Controller */,
 				A14B5F9C218AA17A00BA6EFF /* Model */,
 				A14B5F9A218AA17A00BA6EFF /* View */,
@@ -108,6 +111,7 @@
 		A14B5F93218A9D9400BA6EFF /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				A1DA34B7218FE22F007C7C5B /* Live.storyboard */,
 				A14B5F9D218AA18100BA6EFF /* Controller */,
 				A14B5F9E218AA18100BA6EFF /* Model */,
 				A14B5F9F218AA18100BA6EFF /* View */,
@@ -119,9 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				A14B5F82218A9D1800BA6EFF /* Main.storyboard */,
-				A1DA34B4218FE212007C7C5B /* Home.storyboard */,
-				A1DA34B7218FE22F007C7C5B /* Live.storyboard */,
-				A1DA34B9218FE24A007C7C5B /* Follow.storyboard */,
+				A1DA34BE218FE44C007C7C5B /* MainViewController.swift */,
 				A14B5FA0218AA18A00BA6EFF /* Controller */,
 				A14B5FA1218AA18A00BA6EFF /* Model */,
 				A14B5FA2218AA18A00BA6EFF /* View */,
@@ -132,6 +134,7 @@
 		A14B5F95218A9D9400BA6EFF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A1DA34BC218FE25B007C7C5B /* Profile.storyboard */,
 				A14B5FA3218AA19000BA6EFF /* Controller */,
 				A14B5FA4218AA19100BA6EFF /* Model */,
 				A14B5FA5218AA19100BA6EFF /* View */,
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DA34BF218FE44C007C7C5B /* MainViewController.swift in Sources */,
 				A14B5F7F218A9D1800BA6EFF /* AppDelegate.swift in Sources */,
 				A14B5FA7218AA3CA00BA6EFF /* HomeViewController.swift in Sources */,
 			);
@@ -485,6 +489,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DYZB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shijunfeng.DYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,6 +506,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DYZB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shijunfeng.DYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
