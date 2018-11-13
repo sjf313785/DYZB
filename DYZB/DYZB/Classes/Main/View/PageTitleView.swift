@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate : class {
+     func pageTitleView(titleView : PageTitleView, selectedIndex index : Int)
+}
+
 private let scrollLineH : CGFloat = 2
+private var currentIndex : Int = 0
 
 class PageTitleView: UIView {
 
     private var titles : [String]
     private var titleLabels : [UILabel] = [UILabel]()
+    weak var delegate : PageTitleViewDelegate?
     
     private lazy var contentView : UIScrollView = {
         let scrollView = UIScrollView()
@@ -73,9 +79,37 @@ extension PageTitleView{
             contentView.addSubview(label)
             titleLabels.append(label)
             
+            //label添加手势
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClicked(tapGes:)))
+            label.addGestureRecognizer(tapGes)
+            
         }
         
     }
+    
+    @objc private func titleLabelClicked(tapGes : UIGestureRecognizer){
+        
+        //处理titleLabel
+        guard let currentLabel = tapGes.view as? UILabel else{
+        
+            return
+            
+        }
+        let oldLabel = titleLabels[currentIndex]
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.gray
+        currentIndex = currentLabel.tag
+        //处理下部黄条
+        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        UIView.animate(withDuration: 0.15) {
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        //通知代理做事情
+        
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+    }
+    
     
     private func setupBottomMenuAndScrollLine(){
         
@@ -92,9 +126,4 @@ extension PageTitleView{
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - scrollLineH, width: firstLabel.frame.width, height: scrollLineH)
 
     }
-    
-    
-    
-    
-    
 }
