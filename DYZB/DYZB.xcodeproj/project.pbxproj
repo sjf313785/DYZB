@@ -17,6 +17,9 @@
 		A1DA34BB218FE24A007C7C5B /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA34B9218FE24A007C7C5B /* Follow.storyboard */; };
 		A1DA34BD218FE25B007C7C5B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DA34BC218FE25B007C7C5B /* Profile.storyboard */; };
 		A1DA34BF218FE44C007C7C5B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA34BE218FE44C007C7C5B /* MainViewController.swift */; };
+		A1DD15F321991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD15F221991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift */; };
+		A1DD15F52199517F00C0CFD2 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD15F42199517F00C0CFD2 /* PageTitleView.swift */; };
+		A1DD15F7219953F000C0CFD2 /* Commen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD15F6219953F000C0CFD2 /* Commen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		A1DA34BA218FE24A007C7C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB/Classes/Main/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
 		A1DA34BC218FE25B007C7C5B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		A1DA34BE218FE44C007C7C5B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A1DD15F221991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarbuttonItem-Extention.swift"; sourceTree = "<group>"; };
+		A1DD15F42199517F00C0CFD2 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		A1DD15F6219953F000C0CFD2 /* Commen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +82,10 @@
 		A14B5F90218A9D9400BA6EFF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A14B5F92218A9D9400BA6EFF /* Home */,
 				A14B5F93218A9D9400BA6EFF /* Live */,
 				A14B5F91218A9D9400BA6EFF /* Follow */,
 				A14B5F95218A9D9400BA6EFF /* Profile */,
-				A14B5F92218A9D9400BA6EFF /* Home */,
 				A14B5F94218A9D9400BA6EFF /* Main */,
 				A14B5F96218A9D9400BA6EFF /* Tools */,
 			);
@@ -145,6 +151,8 @@
 		A14B5F96218A9D9400BA6EFF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A1DD15F121991BC600C0CFD2 /* Extention */,
+				A1DD15F6219953F000C0CFD2 /* Commen.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 		A14B5FA2218AA18A00BA6EFF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1DD15F42199517F00C0CFD2 /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +262,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A1DD15F121991BC600C0CFD2 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				A1DD15F221991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +350,10 @@
 			files = (
 				A1DA34BF218FE44C007C7C5B /* MainViewController.swift in Sources */,
 				A14B5F7F218A9D1800BA6EFF /* AppDelegate.swift in Sources */,
+				A1DD15F52199517F00C0CFD2 /* PageTitleView.swift in Sources */,
 				A14B5FA7218AA3CA00BA6EFF /* HomeViewController.swift in Sources */,
+				A1DD15F7219953F000C0CFD2 /* Commen.swift in Sources */,
+				A1DD15F321991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
