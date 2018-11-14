@@ -8,14 +8,18 @@
 
 import UIKit
 
+protocol PageContentViewDelegate : class {
+    func pageContentView(pageContentView : PageContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
+}
+
 private let contentCellID = "contentCellID"
 
 class PageContentView: UIView {
 
     private var childVCs : [UIViewController]
     private weak var parentViewController : UIViewController?
-    
-    
+    private var startOffsetX : CGFloat = 0
+    weak var delegate : PageContentViewDelegate?
     private lazy var collectionView : UICollectionView = { [weak self] in //闭包里面用弱引用
         
         let layout = UICollectionViewFlowLayout()
@@ -29,6 +33,7 @@ class PageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
         return collectionView
         
@@ -63,7 +68,7 @@ extension PageContentView {
     }
 }
 
-extension PageContentView : UICollectionViewDataSource {
+extension PageContentView : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -87,6 +92,45 @@ extension PageContentView : UICollectionViewDataSource {
         
         return cell
         
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffsetX = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var progress : CGFloat = 0.0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
+        let currentOffsetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.bounds.width
+        if currentOffsetX > startOffsetX{
+            progress = (currentOffsetX / scrollViewW) - floor(currentOffsetX / scrollViewW)
+            
+            sourceIndex = Int(currentOffsetX / scrollViewW)
+            
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVCs.count{
+                targetIndex = childVCs.count - 1
+            }
+            if currentOffsetX - startOffsetX == scrollViewW {
+                progress = 1
+                sourceIndex = targetIndex
+            }
+            
+        }else{
+            progress = 1 -  (currentOffsetX / scrollViewW) - floor(currentOffsetX / scrollViewW)
+            
+            targetIndex = Int(currentOffsetX / scrollViewW)
+            
+            sourceIndex = sourceIndex + 1
+            if sourceIndex >= childVCs.count{
+                sourceIndex = childVCs.count - 1
+            }
+        }
+        
+        delegate?.pageContentView(pageContentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
         
     }
     
