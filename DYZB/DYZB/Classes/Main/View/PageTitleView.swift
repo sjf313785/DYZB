@@ -14,6 +14,9 @@ protocol PageTitleViewDelegate : class {
 
 private let scrollLineH : CGFloat = 2
 private var currentIndex : Int = 0
+private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let kSelectedColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+
 
 class PageTitleView: UIView {
 
@@ -31,7 +34,7 @@ class PageTitleView: UIView {
     
     private lazy var scrollLine : UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orange
+        scrollLine.backgroundColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2, alpha: 1.0)
         return scrollLine
     }()
     
@@ -70,7 +73,7 @@ extension PageTitleView{
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor.gray
+            label.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2, alpha: 1.0)
             label.textAlignment = .center
             let labelX : CGFloat = labelW * CGFloat(index)
 
@@ -96,12 +99,16 @@ extension PageTitleView{
             return
             
         }
+        
+        // 1.如果是重复点击同一个Title,那么直接返回
+        if currentLabel.tag == currentIndex { return }
+        
         let oldLabel = titleLabels[currentIndex]
-        currentLabel.textColor = UIColor.orange
-        oldLabel.textColor = UIColor.gray
+        currentLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2, alpha: 1.0)
+        oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2, alpha: 1.0)
         currentIndex = currentLabel.tag
         //处理下部黄条
-        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        let scrollLineX = CGFloat(currentIndex) * scrollLine.frame.width
         UIView.animate(withDuration: 0.15) {
             self.scrollLine.frame.origin.x = scrollLineX
         }
@@ -114,14 +121,14 @@ extension PageTitleView{
     private func setupBottomMenuAndScrollLine(){
         
         let bottomLine = UIView()
-        bottomLine.backgroundColor = UIColor.lightGray
+        bottomLine.backgroundColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2, alpha: 1.0)
         bottomLine.frame = CGRect(x: 0, y: frame.height - 0.5, width: frame.width, height: 0.5)
         addSubview(bottomLine)
         
         guard let firstLabel = titleLabels.first else{
             return
         }
-        firstLabel.textColor = UIColor.orange
+        firstLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2, alpha: 1.0)
         contentView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - scrollLineH, width: firstLabel.frame.width, height: scrollLineH)
 
@@ -131,5 +138,19 @@ extension PageTitleView{
 extension PageTitleView{
     func setTitleWithProgress(progress : CGFloat, sourceIndex : Int, targetIndex : Int) {
         
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        let colorDelta = (kSelectedColor.0 - kNormalColor.0, kSelectedColor.1 - kNormalColor.1,kSelectedColor.2 - kNormalColor.2)
+        
+        sourceLabel.textColor = UIColor(r: kSelectedColor.0 - colorDelta.0 * progress, g: kSelectedColor.1 - colorDelta.1 * progress, b: kSelectedColor.2 - colorDelta.2 * progress, alpha: 1.0)
+        
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress, alpha: 1.0)
+        
+        currentIndex = targetIndex
     }
 }
