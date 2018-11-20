@@ -19,6 +19,7 @@ private let headerViewH : CGFloat = 50
 
 class RecommendViewController: UIViewController {
     
+    private lazy var recommendVM : RecommendViewModel = RecommendViewModel()
     // MARK: - 懒加载UICollectionView -
     private lazy var collectionView : UICollectionView = { [unowned self] in
         
@@ -66,11 +67,7 @@ extension RecommendViewController {
     
     func loadData() {
         
-        NetworkTools.requestData(type: .GET, URLString: "http://httpbin.org/get") { (json) in
-            
-            print(json)
-            
-        }
+        recommendVM.requestData()
         
     }
     

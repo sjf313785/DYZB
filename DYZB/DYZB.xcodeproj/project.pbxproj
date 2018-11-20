@@ -10,6 +10,9 @@
 		5F5198DFB47CB1A83BF0590F /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07732CCA5E1110F0AC3681 /* Pods_DYZB.framework */; };
 		A12F807E21A3A93C00306F5F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F807D21A3A93C00306F5F /* NetworkTools.swift */; };
 		A12F808121A3B2AD00306F5F /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F808021A3B2AD00306F5F /* RecommendViewModel.swift */; };
+		A12F808321A3E03200306F5F /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F808221A3E03200306F5F /* NSDate-Extension.swift */; };
+		A12F808521A3E53000306F5F /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F808421A3E53000306F5F /* AnchorGroup.swift */; };
+		A12F808721A3E89300306F5F /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F808621A3E89300306F5F /* AnchorModel.swift */; };
 		A13195AC21A247880020FAD4 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13195AA21A247880020FAD4 /* CollectionPrettyCell.swift */; };
 		A13195AD21A247880020FAD4 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13195AB21A247880020FAD4 /* CollectionPrettyCell.xib */; };
 		A14B5F7F218A9D1800BA6EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14B5F7E218A9D1800BA6EFF /* AppDelegate.swift */; };
@@ -39,6 +42,9 @@
 		4330E256DDE0AA09026F5332 /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		A12F807D21A3A93C00306F5F /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		A12F808021A3B2AD00306F5F /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		A12F808221A3E03200306F5F /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		A12F808421A3E53000306F5F /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		A12F808621A3E89300306F5F /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		A13195AA21A247880020FAD4 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		A13195AB21A247880020FAD4 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		A14B5F7B218A9D1800BA6EFF /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +261,8 @@
 		A14B5F9C218AA17A00BA6EFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A12F808421A3E53000306F5F /* AnchorGroup.swift */,
+				A12F808621A3E89300306F5F /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 			children = (
 				A1DD15F221991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift */,
 				A1E31D21219A5F1500C72777 /* UIcolor-Extention.swift */,
+				A12F808221A3E03200306F5F /* NSDate-Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -471,16 +480,19 @@
 				A1AA1177219EB0C400012581 /* CollectionHeaderView.swift in Sources */,
 				A14B5F7F218A9D1800BA6EFF /* AppDelegate.swift in Sources */,
 				A1FFBECB219C035700E32F5C /* RecommendViewController.swift in Sources */,
+				A12F808521A3E53000306F5F /* AnchorGroup.swift in Sources */,
 				A1E31D22219A5F1500C72777 /* UIcolor-Extention.swift in Sources */,
 				A1DD15F52199517F00C0CFD2 /* PageTitleView.swift in Sources */,
 				A1E31D20219A5A8900C72777 /* PageContentView.swift in Sources */,
 				A14B5FA7218AA3CA00BA6EFF /* HomeViewController.swift in Sources */,
 				A1DD15F7219953F000C0CFD2 /* Commen.swift in Sources */,
 				A13195AC21A247880020FAD4 /* CollectionPrettyCell.swift in Sources */,
+				A12F808321A3E03200306F5F /* NSDate-Extension.swift in Sources */,
 				A1AA117B219EB6A800012581 /* CollectionNormalCell.swift in Sources */,
 				A12F807E21A3A93C00306F5F /* NetworkTools.swift in Sources */,
 				A1DD15F321991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift in Sources */,
 				A12F808121A3B2AD00306F5F /* RecommendViewModel.swift in Sources */,
+				A12F808721A3E89300306F5F /* AnchorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
