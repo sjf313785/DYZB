@@ -48,6 +48,8 @@ class RecommendViewController: UIViewController {
         view.backgroundColor = UIColor.white
         
         setupUI()
+        
+        loadData()
     }
 }
 
@@ -56,6 +58,20 @@ extension RecommendViewController {
     
     func setupUI() {
         view.addSubview(collectionView)
+    }
+    
+}
+
+extension RecommendViewController {
+    
+    func loadData() {
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://httpbin.org/get") { (json) in
+            
+            print(json)
+            
+        }
+        
     }
     
 }

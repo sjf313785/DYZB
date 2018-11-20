@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5F5198DFB47CB1A83BF0590F /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07732CCA5E1110F0AC3681 /* Pods_DYZB.framework */; };
+		A12F807E21A3A93C00306F5F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F807D21A3A93C00306F5F /* NetworkTools.swift */; };
+		A12F808121A3B2AD00306F5F /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F808021A3B2AD00306F5F /* RecommendViewModel.swift */; };
 		A13195AC21A247880020FAD4 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13195AA21A247880020FAD4 /* CollectionPrettyCell.swift */; };
 		A13195AD21A247880020FAD4 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13195AB21A247880020FAD4 /* CollectionPrettyCell.xib */; };
 		A14B5F7F218A9D1800BA6EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14B5F7E218A9D1800BA6EFF /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		0B07732CCA5E1110F0AC3681 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4330E256DDE0AA09026F5332 /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
+		A12F807D21A3A93C00306F5F /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		A12F808021A3B2AD00306F5F /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		A13195AA21A247880020FAD4 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		A13195AB21A247880020FAD4 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		A14B5F7B218A9D1800BA6EFF /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,14 @@
 				0B07732CCA5E1110F0AC3681 /* Pods_DYZB.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A12F807F21A3B24F00306F5F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A12F808021A3B2AD00306F5F /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A14B5F72218A9D1800BA6EFF = {
@@ -148,6 +160,7 @@
 		A14B5F92218A9D9400BA6EFF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A12F807F21A3B24F00306F5F /* ViewModel */,
 				A1DA34B4218FE212007C7C5B /* Home.storyboard */,
 				A14B5F9B218AA17A00BA6EFF /* Controller */,
 				A14B5F9C218AA17A00BA6EFF /* Model */,
@@ -195,6 +208,7 @@
 			children = (
 				A1DD15F121991BC600C0CFD2 /* Extention */,
 				A1DD15F6219953F000C0CFD2 /* Commen.swift */,
+				A12F807D21A3A93C00306F5F /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -464,7 +478,9 @@
 				A1DD15F7219953F000C0CFD2 /* Commen.swift in Sources */,
 				A13195AC21A247880020FAD4 /* CollectionPrettyCell.swift in Sources */,
 				A1AA117B219EB6A800012581 /* CollectionNormalCell.swift in Sources */,
+				A12F807E21A3A93C00306F5F /* NetworkTools.swift in Sources */,
 				A1DD15F321991C0E00C0CFD2 /* UIBarbuttonItem-Extention.swift in Sources */,
+				A12F808121A3B2AD00306F5F /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
